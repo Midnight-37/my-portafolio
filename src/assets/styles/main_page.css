@@ -1,0 +1,113 @@
+.extra_information__container {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 0 100px !important;
+  .extra_information {
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    .picture__profile {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+    .about_me {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      gap: 10px;
+    }
+
+    .text--name {
+      font-size: 30px;
+      font-weight: 700;
+    }
+  }
+  .extra_information__work {
+    width: 100%;
+    margin: 0 auto;
+    .main__title {
+      margin-bottom: 15px;
+      font-size: 20px;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 5px;
+      text-decoration-thickness: 3px;
+    }
+  }
+  .my__portafolio {
+    display: flex;
+    gap: 5px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #2b8482;
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .my__portafolio:hover {
+    background-color: #236867;
+    transition: 0.5s;
+  }
+  .text--extra {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(94, 94, 94);
+  }
+  .text--important {
+    font-size: 20px;
+    font-weight: 600;
+    color: #3a5a40;
+  }
+  .biograpy {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: repeat(auto, auto);
+    gap: 8px;
+    p:nth-child(odd) {
+      font-weight: bold;
+    }
+  }
+  .extra_information__statement {
+    text-align: justify;
+    line-height: 25px;
+  }
+}
+
+.youtube__container {
+  margin: 20px;
+  p {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+}
+
+.extra_information__work__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media screen and (max-width: 761px) {
+  .extra_information__container {
+    width: 85%;
+    .extra_information {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .about_me {
+      align-items: center !important;
+      text-align: center;
+    }
+  }
+}
