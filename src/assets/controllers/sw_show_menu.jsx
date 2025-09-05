@@ -1,9 +1,9 @@
-const [swShowMenu, setSwShowMenu] = useState(false);
+import { useState } from "react";
 
-const handleSwShowMenu = () => setSwShowMenu(!swShowMenu);
+export default function useMenuController() {
+  const [open, setOpen] = useState(false);
 
-return (
-  <ThemeContext.Provider value={{ swShowMenu, handleSwShowMenu }}>
-    {children}
-  </ThemeContext.Provider>
-);
+  const toggleMenu = () => setOpen(!open);
+
+  return { open, toggleMenu };
+}

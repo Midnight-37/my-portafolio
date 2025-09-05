@@ -1,8 +1,9 @@
+import useMenuController from "../../controllers/sw_show_menu";
 import { useTheme } from "../../controllers/useTheme";
 import "../../styles/main_nav_bar.css";
 function NavBar() {
   const { swLight, handleSwLight } = useTheme();
-
+  const { open, toggleMenu } = useMenuController();
   return (
     <nav className="main__nav-bar">
       <div
@@ -57,7 +58,7 @@ function NavBar() {
               className={!swLight ? "change-sw--light" : "change-sw--moon"}
             />
           </button>
-          <button className="menu-bar">
+          <button className="menu-bar" onClick={toggleMenu}>
             <i className="fa fa-bars"></i>
           </button>
         </div>
@@ -66,6 +67,7 @@ function NavBar() {
         className={`nav-bar__second-container ${
           swLight ? "nav-bar-white" : "nav-bar-black"
         }`}
+        style={{ display: open ? "block" : "none" }}
       >
         <ul className="nav-bar__second-list">
           <li>
